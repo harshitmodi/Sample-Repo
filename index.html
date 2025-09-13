@@ -1,0 +1,44 @@
+<!-- chat/index.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Simple Chat</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <aside class="sidebar" aria-label="Chat history">
+        <div class="sidebar-header">
+          <div class="brand" title="Simple Chat">
+            <span class="brand-logo" aria-hidden="true">💬</span>
+            <span class="brand-name">Simple Chat</span>
+          </div>
+          <button id="newChatBtn" class="button primary" title="New chat">New chat</button>
+        </div>
+        <nav id="chatList" class="chat-list" aria-label="Conversations"></nav>
+        <div class="sidebar-footer">
+          <button id="themeToggle" class="button" title="Toggle theme">Theme: Auto</button>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div class="topbar-title">Chat</div>
+        </header>
+
+        <section id="messages" class="messages" aria-live="polite" aria-label="Messages"></section>
+        <section id="suggestions" class="suggestions" aria-label="Suggestions"></section>
+
+        <form id="composer" class="composer" autocomplete="off">
+          <textarea id="input" class="input" name="prompt" rows="1" placeholder="Message..." spellcheck="true"></textarea>
+          <button type="submit" class="send button primary" aria-label="Send">Send</button>
+        </form>
+      </main>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
